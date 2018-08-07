@@ -1,19 +1,18 @@
-let myHabaneroSauceSquirts, myBurritoObject;
-myHabaneroSauceSquirts = 3;
-myBurritoObject = {
-  tortilla: "wheat",
-  guacamole: true,
-  beans: "pinto",
-  habaneroSauceSquirts: myHabaneroSauceSquirts,
-  spiciness: function(){
-    if (myHabaneroSauceSquirts > 0 ){
-      alert("This is a spicy burrito!");
+let userString, upperCaseMinusE, upperCasedString;
+userString = prompt("What do you want to UPPeRCASe?");
+upperCaseMinusE = function(string){
+  let result;
+  result = "";
+  for (let i = 0; i < string.length ; i = i + 1) {
+    let letter;
+    letter = string[i];
+    if ( letter === "e" ) {
+      result = letter;
     } else {
-      alert("This is a mild burrito.");
+      result = letter.toUpperCase();
     }
   }
+  return result;
 };
-$("#response").html("Your burrito has " +
-  myBurritoObject.habaneroSauceSquirts +
-  "squirts of habanero.");
-myBurritoObject.spiciness();
+upperCasedString = upperCaseMinusE(userString);
+$("#response").html(upperCasedString);
