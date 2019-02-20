@@ -1,3 +1,3 @@
 Kimberly Takahata
 
-# Grainger project training
+# mapping project training
