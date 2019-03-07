@@ -1,6 +1,3 @@
-let i;
-i = 1;
-while ( i < 4 ) {
+for (let i = 1; i < 4; i = i + 1 ) {
   $("#response").append("<br />" + i);
-  i = i + 1;
 }
